@@ -26,11 +26,17 @@ def decrypt(message_to_decrypt, shift_number):
         decrypted_message += decrypted_letter # adding the decrypted letter into the string to output whole message
     print(decrypted_message)
 
+def caesar(message_input, direction_of_cipher, shift_number):
+    message_output = ""
+    for letters in message_input:
+        original_index_of_letters = alphabets.index(letters)
+        if direction_of_cipher == "encode":
+            final_index_of_letters = original_index_of_letters + shift_number
+        elif direction_of_cipher == "decode":
+            final_index_of_letters = original_index_of_letters - shift_number
+        final_letter = alphabets[final_index_of_letters] 
+        message_output += final_letter
+    print(message_output)
+    
 
-
-
-
-
-
-# encrypt(message_to_encrypt=text, shift_number=shift)
-decrypt(message_to_decrypt=text, shift_number=shift)
+caesar(message_input=text, direction_of_cipher=direction, shift_number=shift)
