@@ -5,6 +5,8 @@ print(text)
 
 bidders_information = []
 remaining_bidder = True
+
+# Adding the bidders information to the list
 while remaining_bidder:
     temp = {}
     bidder_name = input("Enter the name of the bidder: \n>> ").capitalize()
@@ -22,6 +24,7 @@ while remaining_bidder:
     elif any_other_bidder == "n":
         remaining_bidder = False
 
+# Finding the highest bidder and their bid amount
 highest_bid_amount = 0
 highest_bidder_name = ""
 for items in bidders_information:
