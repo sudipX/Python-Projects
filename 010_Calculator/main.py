@@ -23,13 +23,13 @@ operations = {
 
 def calculator():
     print(logo)
-    first_num = int(input("Enter the number:\n>> "))
+    first_num = float(input("Enter the number:\n>> "))
     continue_calculation = True
     while continue_calculation:
         for items in operations:
             print(f"{items} : {operations[items]}")
         operator = input("Choose your operator:\n>> ")
-        second_num = int(input("Enter next number:\n>> "))
+        second_num = float(input("Enter next number:\n>> "))
 
         calculation = operations[operator]
         output = calculation(num1=first_num, num2=second_num)
